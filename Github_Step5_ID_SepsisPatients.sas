@@ -1,3 +1,4 @@
+/*Author: Shirley Wang (xiaoqing.wang@va.gov)*/
 /*Data management to ID Sepsis Patients for telephone outreach*/
 libname sepsis '/data/dart/2021/Data/inpatient'; 
 libname edis '/data/dart/2021/Data/EDIS';
@@ -58,10 +59,10 @@ QUIT; RUN;
 
 /*2+ SIRS criteria on presentation during the 72-hour window*/
 /*2 or more of the following criteria present during the 72-hour window (24 prior to ED arrival through 48 hours after ED arrival)
-•	White blood cell (WBC) <4k or >12k
-•	Heart Rate > 90; 
-•	Body Temp >38C or <36C; 
-•	Respiratory Rate>20*/
+â€¢	White blood cell (WBC) <4k or >12k
+â€¢	Heart Rate > 90; 
+â€¢	Body Temp >38C or <36C; 
+â€¢	Respiratory Rate>20*/
 
 /*merge in vitals data*/
 /*WBC*/
@@ -237,10 +238,10 @@ PROC SQL;
 QUIT; RUN;
 
 /*Define SIRS+: SIRS is defined as 2 or more:
-•	Temp > 100.4 or < 96.8,
-•	Heart Rate > 90 ,
-•	Respiratory Rate > 20 ,
-•	White Blood Cells > 12K or < 4K */
+â€¢	Temp > 100.4 or < 96.8,
+â€¢	Heart Rate > 90 ,
+â€¢	Respiratory Rate > 20 ,
+â€¢	White Blood Cells > 12K or < 4K */
 /*revised with the 72 hour window, this "day" values doesn't matter anymore. 24hrs before ED presentation to 48hrs after ED presentation.*/
 DATA ED_only_SIRS (compress=yes);
 SET  V2_VAtoVA_daily_&todaysdate;
@@ -724,8 +725,8 @@ run;
 
 /******************************************************************************/
 /*(6)	Acute respiratory/lung dysfunction: Meets at least 1 criteria:
-•	receipt of invasive mechanical ventilation during any of the following days: the day of ED arrival or day after ED arrival 
-•	receipt of at least 4LNC supplemental oxygen ABOVE baseline during the 72-hour window */
+â€¢	receipt of invasive mechanical ventilation during any of the following days: the day of ED arrival or day after ED arrival 
+â€¢	receipt of at least 4LNC supplemental oxygen ABOVE baseline during the 72-hour window */
 
 /*Merge in mech vent daily*/
 PROC SQL;
