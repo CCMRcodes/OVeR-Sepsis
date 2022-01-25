@@ -1,3 +1,4 @@
+/*Author: Shirley Wang (xiaoqing.wang@va.gov)*/
 /*Download the CDW dflt table from step 1 into a SAS dataset*/
 libname sepsis '/data/dart/2021/Data/inpatient'; 
 
