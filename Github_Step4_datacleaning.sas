@@ -1,3 +1,4 @@
+/*Author: Shirley Wang (xiaoqing.wang@va.gov)*/
 /*Clean datasets pulled in on labs, vitals, etc.*/
 %let todaysdate=%sysfunc(today(), yymmddn8.); %put &todaysdate;
 
