@@ -1,3 +1,4 @@
+/*Author: Shirley Wang (xiaoqing.wang@va.gov)*/
 /*Step 1. SAS Pass Thru Code to pull in all inpatient speciality stays from CDW*/
 
 libname sepsis '/data/dart/2021/Data/inpatient'; 
@@ -192,7 +193,7 @@ where dischargedatetime is not null;
 drop table #merged_vapd_inpat_SW20210517;
 
 /*change the final dflt table name to include the dates pulled in within the name. 
-make sure to change the table names below as well. Note: ìOSî stands for OverSepsis*/
+make sure to change the table names below as well. Note: ‚ÄúOS‚Äù stands for OverSepsis*/
 select *
 into #OS_cohort_testpull
 from #vapd_inpatb;
