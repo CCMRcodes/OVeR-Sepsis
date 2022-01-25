@@ -1,3 +1,4 @@
+/*Author: Shirley Wang (xiaoqing.wang@va.gov)*/
 /***** SAS Pass Thru Code to pull in additional data to define Sepsis Patients ****/
 /*Change dates and cohort with each new run:*/
 /*SAS Macro of today's date*/
